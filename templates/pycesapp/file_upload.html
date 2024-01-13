@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>File Upload</title>
+</head>
+
+<body>
+    <h2>Try PyCes !!! </h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+        {% endif %}
+
+        {{ form.as_p}}
+        {{form.zipfile.errors}}
+        <button type="submit">Upload</button>
+    </form>
+    <h3> How to use PyCes - Python Code Scanner ?</h3>
+    <a href='https://github.com/nitinrameshuf/PyCes-Linux/blob/master/PyCes_Manual.pdf'> Link to Manual </a>
+    <br>
+    <h4> YouTube Link </h4>
+    <iframe width="425" height="349" src="https://www.youtube.com/embed/fb_ITHhCbi8" frameborder="0"
+        allowfullscreen></iframe>
+</body>
+
+</html>
